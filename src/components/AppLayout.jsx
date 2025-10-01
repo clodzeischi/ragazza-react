@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 const AppLayout = () => {
     return (
         <>
-            {/*<NavBar />*/}
+            <NavBar color='dark' dark expand='md' fixed='top' full='true' />
             <main>
                 <Outlet />
             </main>
