@@ -38,8 +38,8 @@ const NavBar = (args) => {
                             <Link to="/menu">Menu</Link>
                         </NavItem>
                         <NavItem className='me-3'>
-                            <Link to='/application'>
-                                Application
+                            <Link to='/hiring'>
+                                Hiring
                             </Link>
                         </NavItem>
                     </Nav>
