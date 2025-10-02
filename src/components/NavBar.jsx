@@ -8,6 +8,7 @@ import {
     NavItem
 } from 'reactstrap';
 import {Link} from "react-router-dom";
+import myLogo from '../assets/logo_hi.png';
 
 const NavBar = (args) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const NavBar = (args) => {
                 <NavbarBrand tag={Link} to="/" className='me-3'>
                     <img
                         alt="logo"
-                        src='../../public/logo_med.png'
+                        src={myLogo}
                         style={{
                             height: 40,
                             width: 40,
