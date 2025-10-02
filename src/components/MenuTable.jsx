@@ -6,7 +6,10 @@ const MenuTable = ({items}) => (
   <thead>
     <tr>
       <th>
-        Dish
+        Photo
+      </th>
+      <th>
+        Item
       </th>
       <th>
         Description
@@ -14,20 +17,17 @@ const MenuTable = ({items}) => (
       <th>
         Price
       </th>
-      <th>
-        Image
-      </th>
     </tr>
   </thead>
   <tbody>
       {items.map((item, index) => (
         <tr key={index}>
-          <td>{item.name}</td>
-          <td>{item.description}</td>
-          <td>{item.price}</td>
-          <td>
-            <img src={item.image} alt={item.name} style={{ height: '80px' }} />
-          </td>
+            <td>
+                <img src={item.img} alt={item.name} style={{ height: '120px' }} />
+            </td>
+            <td>{item.name}</td>
+            <td>{item.description}</td>
+            <td>{item.price}</td>
         </tr>
       ))}
   </tbody>

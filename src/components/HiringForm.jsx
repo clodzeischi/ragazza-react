@@ -1,8 +1,8 @@
-const Hiring = () => {
+const HiringForm = () => {
     return (
         <>
         </>
     )
 }
 
-export default Hiring;
+export default HiringForm;

@@ -1,9 +1,12 @@
-const ApplicationPage = () => {
+import HiringForm from "../components/HiringForm";
+
+const Hiring = () => {
     return (
         <>
-            <h2>Application page.</h2>
+            <h2>Hiring application</h2>
+            <HiringForm />
         </>
     )
 }
 
-export default ApplicationPage;
+export default Hiring;
