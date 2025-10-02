@@ -8,31 +8,31 @@ const menuItems = [
     {
         img: food1,
         name: 'Pane Cunzato',
-        description: 'Country bread with tomatoes, anchovies, olive oil, aged cheese, and oregano.',
+        description: 'Country bread with tomatoes, anchovies, olive oil, aged cheese, and oregano',
         price: '$15.99'
     },
     {
         img: food2,
         name: 'Alici Marinate',
-        description: 'Fresh anchovies marinated in lemon, garlic, parsley, and olive oil.',
+        description: 'Fresh anchovies marinated in lemon, garlic, parsley, and olive oil',
         price: '$17.99'
     },
     {
         img: food3,
         name: 'Pasta alla Norma',
-        description: 'Rustic pasta with traditional Sicilian tomato sauce and mushrooms.',
+        description: 'Rustic pasta with traditional Sicilian tomato sauce and mushrooms',
         price: '$15.99'
     },
     {
         img: food4,
         name: 'Caciocavallo alla Brace',
-        description: 'Grilled aged cheese with olive oil and herbs.',
+        description: 'Grilled aged cheese with olive oil and herbs',
         price: '$14.99'
     },
     {
         img: food5,
         name: 'Polpette di Melanzane',
-        description: 'Eggplant fritters with pecorino, garlic, and mint.',
+        description: 'Eggplant fritters with pecorino, garlic, and mint',
         price: '$17.99'
     }
 ];

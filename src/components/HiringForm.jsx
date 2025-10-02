@@ -1,10 +1,6 @@
 import {Form, FormGroup, Label, Input, Col, FormText, Button} from "reactstrap";
 
 /*
-Age: required; range 21–99; default value 21
-Phone: required
-Email: required
-
 Password: required; 8–12 characters; must include at least one uppercase, one lowercase, one number, and one special symbol; enforce with pattern
     Married: radio buttons; default set to “single”
 Buttons: Submit and Reset
@@ -79,7 +75,6 @@ const HiringForm = () => {
                             maxLength={29}/>
                     </Col>
                 </FormGroup>
-
                 <FormGroup row>
                     <Label
                         for="stateSelect"
@@ -155,7 +150,9 @@ const HiringForm = () => {
                             name="password"
                             placeholder="Create password"
                             type="password"
-                            required={true}/>
+                            required={true}
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&]).{8,12}$"
+                        />
                     </Col>
                 </FormGroup>
                 <FormGroup row tag="fieldset">
@@ -188,7 +185,6 @@ const HiringForm = () => {
                         </FormGroup>
                     </Col>
                 </FormGroup>
-
                 <FormGroup
                     check
                     row>
