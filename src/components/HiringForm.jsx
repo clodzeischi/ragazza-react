@@ -1,11 +1,6 @@
 import {Form, FormGroup, Label, Input, Col, FormText, Button} from "reactstrap";
 
 /*
-First name: required; 1–20 characters
-Last name: optional; if present 1–20 characters
-Address 1: required; maximum length should be defined by you (reasonable choice)
-City: required; maximum 29 characters
-State: required; select with only three two-letter options
 Age: required; range 21–99; default value 21
 Phone: required
 Email: required
@@ -33,7 +28,8 @@ const HiringForm = () => {
                             name="fname"
                             placeholder="Alice"
                             type="text"
-                            required={true}/>
+                            required={true}
+                            maxLength={20}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -47,7 +43,8 @@ const HiringForm = () => {
                             id="lastName"
                             name="lname"
                             placeholder="Inchains"
-                            type="text"/>
+                            type="text"
+                            maxLength={20}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -62,7 +59,8 @@ const HiringForm = () => {
                             name="address"
                             placeholder="123 Main st."
                             type="text"
-                            required={true}/>
+                            required={true}
+                            maxLength={29}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -77,7 +75,8 @@ const HiringForm = () => {
                             name="city"
                             placeholder="Toanwood"
                             type="text"
-                            required={true}/>
+                            required={true}
+                            maxLength={29}/>
                     </Col>
                 </FormGroup>
 
@@ -96,8 +95,6 @@ const HiringForm = () => {
                             <option>TX</option>
                             <option>NM</option>
                             <option>OK</option>
-                            <option>LA</option>
-                            <option>AZ</option>
                         </Input>
                     </Col>
                 </FormGroup>
@@ -112,7 +109,9 @@ const HiringForm = () => {
                             id="age"
                             name="age"
                             placeholder="21"
-                            type="number"/>
+                            type="number"
+                            min={21}
+                            max={99}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -159,7 +158,6 @@ const HiringForm = () => {
                             required={true}/>
                     </Col>
                 </FormGroup>
-
                 <FormGroup row tag="fieldset">
                     <legend className="col-form-label col-sm-2">
                         Married
@@ -196,12 +194,12 @@ const HiringForm = () => {
                     row>
                     <Col
                         sm={{
-                            offset: 2,
-                            size: 4
+                            offset: 4,
+                            size: 8
                         }}>
                         <Button>Submit</Button>
                         {' '}
-                        <Button>Reset</Button>
+                        <Button type='reset'>Reset</Button>
                     </Col>
                 </FormGroup>
             </Form>
