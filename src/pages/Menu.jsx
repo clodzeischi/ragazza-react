@@ -3,7 +3,7 @@ import menuItems from '../utils/menuitems';
 
 const Menu = () => {
     return (
-        <div >
+        <div style={{maxWidth: '800px', margin: 'auto'}}>
             <h2>Menu</h2>
             <MenuTable items={menuItems} />
         </div>
