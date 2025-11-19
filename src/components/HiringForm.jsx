@@ -45,12 +45,25 @@ const HiringForm = () => {
         setValue,
         reset,
         formState: {errors}
-    } = useForm({resolver: yupResolver(userSchema)});
+    } = useForm({resolver: yupResolver(userSchema), defaultValues :
+            {
+                fname: '',
+                lname: '',
+                address: '',
+                city: '',
+                state: '',
+                age: 25,
+                phone: '',
+                email: '',
+                password: '',
+                married: 'false'
+            }});
 
     const onSubmit = (data) => {
         console.log(data);
         reset();
     }
+
 
     const handleChange = (event) => {
         setValue(event.target.name, event.target.value);
@@ -62,7 +75,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="fname" sm={2}>First name</Label>
                     <Col sm={10}>
-                        <Input id="fname" name="fname" placeholder="Alice" type="text"
+                        <Input id="fname" placeholder="Alice" type="text"
                             {...register('fname')}
                             onChange={handleChange}/>
                     </Col>
@@ -71,7 +84,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="lname" sm={2}>Last name</Label>
                     <Col sm={10}>
-                        <Input id="lname" name="lname" placeholder="Inchains" type="text"
+                        <Input id="lname" placeholder="Inchains" type="text"
                             {...register('lname')}
                             onChange={handleChange}/>
                     </Col>
@@ -80,7 +93,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="address" sm={2}>Address</Label>
                     <Col sm={10}>
-                        <Input id="address" name="address" placeholder="123 Main st." type="text"
+                        <Input id="address" placeholder="123 Main st." type="text"
                             {...register('address')}
                             onChange={handleChange}/>
                     </Col>
@@ -89,7 +102,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="city" sm={2}>City</Label>
                     <Col sm={10}>
-                        <Input id="city" name="city" placeholder="Toanwood" type="text"
+                        <Input id="city" placeholder="Toanwood" type="text"
                             {...register('city')}
                             onChange={handleChange}/>
                     </Col>
@@ -98,7 +111,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="state" sm={2} >State</Label>
                     <Col sm={10}>
-                        <Input id="state" name="state" type="select"
+                        <Input id="state" type="select"
                                {...register('state')}
                                onChange={handleChange}>
                             <option>--state--</option>
@@ -112,7 +125,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="age" sm={2}>Age</Label>
                     <Col sm={10}>
-                        <Input id="age" name="age" placeholder='25' type="number"
+                        <Input id="age" placeholder='25' type="number"
                                {...register('age')}
                                onChange={handleChange}/>
                     </Col>
@@ -121,7 +134,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="phone" sm={2}>Phone</Label>
                     <Col sm={10}>
-                        <Input id="phone" name="phone" placeholder="123-123-1234" type="text"
+                        <Input id="phone" placeholder="123-123-1234" type="text"
                                {...register('phone')}
                                onChange={handleChange}/>
                     </Col>
@@ -130,7 +143,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="email" sm={2}>Email</Label>
                     <Col sm={10}>
-                        <Input id="email" name="email" placeholder="name@domain.com" type="email"
+                        <Input id="email" placeholder="name@domain.com" type="email"
                                {...register('email')}
                                onChange={handleChange}/>
                     </Col>
@@ -139,7 +152,7 @@ const HiringForm = () => {
                 <FormGroup row>
                     <Label for="password" sm={2}>Password</Label>
                     <Col sm={10}>
-                        <Input id="password" name="password" placeholder="Create password" type="password"
+                        <Input id="password" placeholder="Create password" type="password"
                                {...register('password')}
                                onChange={handleChange}/>
                     </Col>
@@ -149,14 +162,14 @@ const HiringForm = () => {
                     <legend className="col-form-label col-sm-2">Married</legend>
                     <Col sm={10}>
                         <FormGroup check>
-                            <Input name="radio2" type="radio" value='false' defaultChecked={true}
+                            <Input type="radio" value='false' defaultChecked={true}
                                    {...register('married')}
                                    onChange={handleChange}/>
                             {' '}
                             <Label check>No</Label>
                         </FormGroup>
                         <FormGroup check>
-                            <Input name="radio2" type="radio" value='true'
+                            <Input type="radio" value='true'
                                    {...register('married')}
                                    onChange={handleChange}/>
                             {' '}
